@@ -1797,7 +1797,7 @@ GameObject:
   - component: {fileID: 584743539}
   - component: {fileID: 584743538}
   m_Layer: 5
-  m_Name: title
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1819,7 +1819,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -528, y: 427}
+  m_AnchoredPosition: {x: -609, y: 415}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.49999994, y: 0.5}
 --- !u!114 &584743538
@@ -1842,7 +1842,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Welcome to Romeo and Juliet
+  m_text: Romeo and Juliet
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 78e93e408d42f98419e3e9ccdc3ea219, type: 2}
   m_sharedMaterial: {fileID: 3161075823911177183, guid: 78e93e408d42f98419e3e9ccdc3ea219, type: 2}
@@ -6248,7 +6248,7 @@ GameObject:
   - component: {fileID: 1736697482}
   - component: {fileID: 1736697481}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
