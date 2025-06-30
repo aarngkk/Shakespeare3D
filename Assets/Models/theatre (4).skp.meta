@@ -3,7 +3,192 @@ guid: 407e2b0e361fead4c87db78df76c0112
 SketchUpImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Curtain Toon Mat_
+    second: {fileID: 2100000, guid: 9c8856043c7b99e4fbf45953cd6239cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material242
+    second: {fileID: 2100000, guid: e8c243ec160f73542a2696365ab66e14, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Screenshot 2021-11-10 at 3.50.25 PM
+    second: {fileID: 2100000, guid: 1b1586ce27c0a8b4498d5d72590a7fce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ty_Blue1
+    second: {fileID: 2100000, guid: fe80f0ab97e0eb54686a7513a29a04a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ty_Blue2
+    second: {fileID: 2100000, guid: 33de2bfe4f86d37459c27e19a1aec7e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ty_Blue3
+    second: {fileID: 2100000, guid: b00411324cb9e3b4b878188bc00d6456, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ty_Blue4
+    second: {fileID: 2100000, guid: 61e0a383c52b45d48b2c50d058e7d151, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ty_Brown1
+    second: {fileID: 2100000, guid: fe98579c4e9379a418222ec17f6193ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ty_Brown2
+    second: {fileID: 2100000, guid: e9f0115b44c76d04f9706bcd69f1cf29, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ty_Gray1
+    second: {fileID: 2100000, guid: 13a36d9c6deaba447bb9bb37e7fdfa48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ty_Gray2
+    second: {fileID: 2100000, guid: c37372ebce2ff4040acb4d800651d8e7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ty_Green
+    second: {fileID: 2100000, guid: 0f4162db7dc55ea459f6f500a7684fa3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ty_Orange
+    second: {fileID: 2100000, guid: 274d4992f00044743bcec4702e4ea20d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ty_Red
+    second: {fileID: 2100000, guid: d862d7f2f5490064899198a05dd0b312, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ty_Skin
+    second: {fileID: 2100000, guid: 044ec8e4d9d305648ac96fdc39a590d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ty_Yellow
+    second: {fileID: 2100000, guid: fd63210a812d07c4eba3803d87acda2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[0011_Seashell]1'
+    second: {fileID: 2100000, guid: 4d76a8d3bd094914ab3f227dcbbb5e11, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Cinder Block]'
+    second: {fileID: 2100000, guid: 998884660790748488fca40bdf5fd9c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Color A08]'
+    second: {fileID: 2100000, guid: 4ef66d14aa70b4f4ab95c6f6244a4f76, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Color B07]'
+    second: {fileID: 2100000, guid: 970f8b4b6bb2d224f80acd386efdabc7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Color C01]'
+    second: {fileID: 2100000, guid: 90519c1f0a63c5e49901deddb7b1b9c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Color C08]'
+    second: {fileID: 2100000, guid: f13765c359e108d43916395795ccf594, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Color D01]'
+    second: {fileID: 2100000, guid: 9e1c52dc1eefb8c4b83c1f834236d706, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Color_D03]'
+    second: {fileID: 2100000, guid: df382005fb9ee1447837a8c1df544f1d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Color_D10]1'
+    second: {fileID: 2100000, guid: 3a7c9272f33b0714cb7ae02ddb801dff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Mirror 02]'
+    second: {fileID: 2100000, guid: 1ceeee61541458d439c2b06555fb217f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Suede Green]'
+    second: {fileID: 2100000, guid: cbf5c7a66efdb574eb59d65bd75798a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Translucent_Glass_Safety]1'
+    second: {fileID: 2100000, guid: 233d49587deeeac459a776fa29b7bd93, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Wood Floor]'
+    second: {fileID: 2100000, guid: e22810289c009e04b98a2d7f030f154f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _1
+    second: {fileID: 2100000, guid: e300e8febb66a2749989f4d1aa1d7808, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _2
+    second: {fileID: 2100000, guid: 07beac233c536de4fae75c6a610ec7b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _4
+    second: {fileID: 2100000, guid: fc86dc5adef319947adf6ba5ec1d0396, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _5
+    second: {fileID: 2100000, guid: 99dfe31f323589f41a0be06cc59b6e03, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _9
+    second: {fileID: 2100000, guid: ea302bb202330fc4fb8447b4ac103f4c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _defaultMat
+    second: {fileID: 2100000, guid: 9fdd40e2ffda58448a5ba0817e3e21b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: birch plywood
+    second: {fileID: 2100000, guid: ef38056afdc4a0a43a9fb2e18da5e4d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: jet mahogany
+    second: {fileID: 2100000, guid: 1de30069dd7a4d44c8584d2a32c8d59c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 2
@@ -112,5 +297,5 @@ SketchUpImporter:
   selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f000000600000006100000062000000630000006400000065000000660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f000000700000007100000072000000730000007400000075000000760000007700000078000000790000007a0000007b0000007c0000007d0000007e0000007f000000800000008100000082000000830000008400000085000000860000008700000088000000890000008a0000008b0000008c0000008d0000008e0000008f000000900000009100000092000000930000009400000095000000960000009700000098000000990000009a0000009b0000009c0000009d0000009e0000009f000000a0000000a1000000a2000000a3000000a4000000a5000000a6000000a7000000a8000000a9000000aa000000ab000000ac000000ad000000ae000000af000000b0000000b1000000b2000000b3000000b4000000b5000000b6000000b7000000b8000000b9000000ba000000bb000000bc000000bd000000be000000bf000000c0000000c1000000c2000000c3000000c4000000c5000000c6000000c7000000c8000000c9000000ca000000cb000000cc000000cd000000ce000000cf000000d0000000d1000000d2000000d3000000d4000000d5000000d6000000d7000000d8000000d9000000da000000db000000dc000000dd000000de000000df000000e0000000e1000000e2000000e3000000e4000000e5000000e6000000e7000000e8000000e9000000ea000000eb000000ec000000ed000000f0000000f1000000f2000000f3000000f4000000f5000000f6000000f7000000f8000000f9000000fa000000fb000000fe000000ff000000000100000101000002010000030100000401000005010000060100000701000008010000090100000c0100000d0100000e0100000f01000010010000110100001201000013010000140100001501000016010000170100001a0100001b0100001c0100001d0100001e0100001f01000020010000210100002201000023010000240100002501000026010000290100002a0100002b0100002c0100002d0100002e0100002f010000300100003101000032010000330100003401000035010000360100003701000038010000390100003c0100003d0100003e0100003f010000400100004101000042010000430100004401000045010000460100004701000048010000490100004a0100004b0100004c0100004f010000500100005101000052010000530100005401000055010000560100005701000058010000590100005a0100005b0100005c0100005d0100005e0100005f01000062010000630100006401000065010000660100006701000068010000690100006a0100006b0100006c0100006d0100006e0100006f0100007001000071010000720100007301000074010000
   assetHash:
     serializedVersion: 2
-    Hash: c392f180a0d84642628fef379aa6970c
+    Hash: 29b61fe3a061bf6be8702b20830e2598
   fileUnit: 0

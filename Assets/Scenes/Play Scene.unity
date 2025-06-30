@@ -2078,7 +2078,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 78e93e408d42f98419e3e9ccdc3ea219, type: 2}
   m_sharedMaterial: {fileID: 3161075823911177183, guid: 78e93e408d42f98419e3e9ccdc3ea219, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 3161075823911177183, guid: 78e93e408d42f98419e3e9ccdc3ea219, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -3197,7 +3198,6 @@ MonoBehaviour:
   scriptDetailText: {fileID: 0}
   nextButton: {fileID: 0}
   prevButton: {fileID: 0}
-  selectButton: {fileID: 0}
   backButton: {fileID: 0}
   otherButtons:
   - {fileID: 0}
@@ -3207,7 +3207,11 @@ MonoBehaviour:
   - {fileID: 0}
   scrollRect: {fileID: 0}
   saveButton: {fileID: 0}
+  undoButton: {fileID: 0}
+  redoButton: {fileID: 0}
   scriptButton: {fileID: 0}
+  buttonText: {fileID: 0}
+  titleText: {fileID: 0}
 --- !u!4 &386359722
 Transform:
   m_ObjectHideFlags: 0
@@ -3951,7 +3955,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 78e93e408d42f98419e3e9ccdc3ea219, type: 2}
   m_sharedMaterial: {fileID: 3161075823911177183, guid: 78e93e408d42f98419e3e9ccdc3ea219, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 3161075823911177183, guid: 78e93e408d42f98419e3e9ccdc3ea219, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -4085,7 +4090,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 78e93e408d42f98419e3e9ccdc3ea219, type: 2}
   m_sharedMaterial: {fileID: 3161075823911177183, guid: 78e93e408d42f98419e3e9ccdc3ea219, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 3161075823911177183, guid: 78e93e408d42f98419e3e9ccdc3ea219, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -4622,6 +4628,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   logFileName: 
+  playButton: {fileID: 0}
+  pauseButton: {fileID: 0}
+  Script1ChoicePopUp: {fileID: 0}
+  bedZone: {fileID: 0}
+  dresserZone: {fileID: 0}
+  carpetObject: {fileID: 0}
+  mainCamera: {fileID: 0}
+  stageCamera: {fileID: 0}
   bedCutscene: {fileID: 1381332848}
   dresserCutscene: {fileID: 1331375467}
   choicePopupPanel: {fileID: 0}
@@ -4644,6 +4658,31 @@ MonoBehaviour:
   julietKneelingChoicePopupPanel: {fileID: 0}
   kneelButton: {fileID: 0}
   standButton: {fileID: 0}
+  julietKneelsCapuletCalm: {fileID: 0}
+  julietKneelsCapuletAngry: {fileID: 0}
+  julietStandsCapuletCalm: {fileID: 0}
+  julietStandsCapuletAngry: {fileID: 0}
+  capuletThirdChoicePopupPanel: {fileID: 0}
+  calmDownButton: {fileID: 0}
+  remainAngryButton: {fileID: 0}
+  capuletCalmsDownCutscene: {fileID: 0}
+  capuletRemainsAngryCutscene: {fileID: 0}
+  script7PositionPanel: {fileID: 0}
+  script7ChoicePopupPanel: {fileID: 0}
+  desperateButton: {fileID: 0}
+  sorrowfulButton: {fileID: 0}
+  bedDesperateCutscene: {fileID: 0}
+  bedSorrowfulCutscene: {fileID: 0}
+  carpetDesperateCutscene: {fileID: 0}
+  carpetSorrowfulCutscene: {fileID: 0}
+  JulietSitWalkChoicePopupPanel: {fileID: 0}
+  sitButton: {fileID: 0}
+  walkButton: {fileID: 0}
+  julietSitCutscene: {fileID: 0}
+  julietWalkCutscene: {fileID: 0}
+  currentCutscene: {fileID: 0}
+  isReplayMode: 0
+  FinishedPopUp: {fileID: 0}
 --- !u!320 &904377165
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -7274,6 +7313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cutsceneManager: {fileID: 904377164}
+  skipButton: {fileID: 0}
 --- !u!4 &1258016024
 Transform:
   m_ObjectHideFlags: 0
@@ -10019,7 +10059,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08abd3e1a0aac574d9a0f4ef2d952597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  undoRedoManager: {fileID: 0}
 --- !u!95 &1430754409
 Animator:
   serializedVersion: 5
@@ -12786,7 +12825,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -14438,6 +14478,8 @@ MonoBehaviour:
   scriptSelectionManager: {fileID: 0}
   sceneNameInputField: {fileID: 1358781967}
   savePanel: {fileID: 1678306091}
+  leavePanel: {fileID: 0}
+  overwriteConfirmPanel: {fileID: 0}
   errorMessageText: {fileID: 2055934592}
   mainScreenButtons:
   - {fileID: 1353481452}
@@ -14446,8 +14488,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   saveButton: {fileID: 348706998}
+  undoButton: {fileID: 0}
   sceneIsSaved: 0
-  undoRedoManager: {fileID: 0}
 --- !u!4 &2034707705
 Transform:
   m_ObjectHideFlags: 0
@@ -14634,7 +14676,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08abd3e1a0aac574d9a0f4ef2d952597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  undoRedoManager: {fileID: 0}
 --- !u!136 &2084066589
 CapsuleCollider:
   m_ObjectHideFlags: 0
