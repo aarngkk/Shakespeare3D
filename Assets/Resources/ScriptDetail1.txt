@@ -1,25 +1,41 @@
 ACT 3 SCENE 5
 
-Lady Capulet
-Find thou the means, and I'll find such a man.
+<u>Lady Capulet</u>
+Find thou the means, and I'll find such a man. 
 But now I'll tell thee joyful tidings, girl.
 
-Juliet
+<i><size=75%>You find a suitable poison, and I’ll find a suitable servant.
+But now I have to tell you good news, girl.</size></i>
+
+<u>Juliet</u>
 And joy comes well in such a needy time.
 What are they, beseech your ladyship?
 
-Lady Capulet
+<i><size=75%>Joy is badly needed in this time. Please, 
+mother, what is the good news?</size></i>
+
+<u>Lady Capulet</u>
 Well, well, thou hast a careful father, child;
 One who, to put thee from thy heaviness,
 Hath sorted out a sudden day of joy,
 That thou expects not, nor I looked not for.
 
-Juliet
+<i><size=75%>Well, you have a thoughtful father, child. Your father, 
+to alleviate your grief, has arranged a joyful day for 
+you, which neither you nor I anticipated.</size></i>
+
+<u>Juliet</u>
 Madam, in happy time. What day is that?
 
-Lady Capulet
+<i><size=75%>What day is that, mother?</size></i>
+
+<u>Lady Capulet</u>
 Marry, my child, early next Thursday morn
 The gallant, young, and noble gentleman,
 The County Paris, at Saint Peter's Church,
 Shall happily make thee there a joyful bride.
+
+<i><size=75%>Indeed, my child, it’s next Thursday in the early morning,
+when Count Paris, the gallant, young, and noble gentleman, 
+will make you a happy bride at Saint Peter’s Church.</size></i>
 

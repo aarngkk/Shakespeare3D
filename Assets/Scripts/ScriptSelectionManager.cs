@@ -24,6 +24,7 @@ public class ScriptSelectionManager : MonoBehaviour
     // Script management variables
     private List<string> scripts = new List<string>();
     private int currentIndex = 0;
+    private float scrollSens = 3f;
     public string SelectedScript { get; private set; }
     public static bool IsPanelOpen { get; private set; }
 
@@ -32,6 +33,11 @@ public class ScriptSelectionManager : MonoBehaviour
         LoadScripts();
         UpdateScriptDetail();
         backButton.onClick.AddListener(CloseScriptSelection);
+
+        if (scrollRect != null)
+        {
+            scrollRect.scrollSensitivity = scrollSens; 
+        }
 
         // Initialize button states
         if (saveButton != null) saveButton.interactable = false;

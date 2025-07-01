@@ -1,6 +1,6 @@
 ACT 3 SCENE 5
 
-Juliet
+<u>Juliet</u>
 Now, by Saint Peter's Church and Peter too,
 He shall not make me there a joyful bride.
 I wonder at this haste, that I must wed
@@ -10,8 +10,20 @@ I will not marry yet; and, when I do, I swear
 It shall be Romeo, whom you know I hate,
 Rather than Paris. These are news indeed!
 
-Lady Capulet
+<i><size=75%>I swear on the Church of Saint Peter and Peter himself,
+too, he will not make me a happy bride there. I’m amazed
+at this haste, that I have to get married before he’s even
+come to woo me, the man who wants to be my husband. Please, 
+mother, tell my lord and father that I won’t marry yet, and 
+when I do I’d rather marry Romeo, whom you know I hate, than 
+marry Paris. What incredible news indeed!</size></i>
+
+<u>Lady Capulet</u>
 Here comes your father; tell him so yourself,
 And see how he will take it at your hands.
+
+<i><size=75%>Here comes your father, tell him so yourself and 
+see how he takes it from you.</size></i>
+
 [Enter Capulet and Nurse]
 
