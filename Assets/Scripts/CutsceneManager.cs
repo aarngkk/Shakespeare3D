@@ -15,6 +15,19 @@ public class CutsceneManager : MonoBehaviour
     public Button playButton;
     public Button pauseButton;
 
+    [Header("Subtitles")]
+    public GameObject subtitlesPanel;
+    public SubtitleManager subtitleManager;
+    [System.Serializable]
+    public class CutsceneSubtitleMapping
+    {
+        public string cutsceneType;
+        public SubtitleData subtitleData;
+    }
+
+    public CutsceneSubtitleMapping[] subtitleMappings;
+
+
     // State flags for specific cutscene triggers
     private bool isCutscene1Started = false;
     public bool IsCutscene1Started() => isCutscene1Started; // Accessor for cutscene 1 state
@@ -226,6 +239,32 @@ public class CutsceneManager : MonoBehaviour
 
         Debug.Log($"Playing cutscene: {currentCutscene.name}");
 
+        // Look for matching subtitle data
+        SubtitleData selectedSubtitleData = null;
+        foreach (var mapping in subtitleMappings)
+        {
+            if (mapping.cutsceneType == cutsceneType)
+            {
+                selectedSubtitleData = mapping.subtitleData;
+                break;
+            }
+        }
+
+        // Start the subtitles if found
+        if (subtitleManager != null)
+        {
+            if (selectedSubtitleData != null && currentCutscene != null)
+            {
+                subtitleManager.PlaySubtitles(selectedSubtitleData, currentCutscene);
+                Debug.Log($"Subtitles started for cutscene: {cutsceneType}");
+            }
+            else
+            {
+                subtitleManager.ClearSubtitles();
+                Debug.Log($"No subtitles found for cutscene: {cutsceneType}");
+            }
+        }
+
         // Track user choice and attach event handler (unless in replay mode)
         if (!isReplayMode)
         {
@@ -249,6 +288,12 @@ public class CutsceneManager : MonoBehaviour
         // Start the cutscene playback
         currentCutscene.Play();
 
+        // Enable subtitles panel if assigned
+        if (subtitlesPanel != null)
+        {
+            subtitlesPanel.SetActive(true);
+        }
+
         // Update character interactivity based on state
         UpdateAllCharactersDraggableState();
     }
@@ -266,6 +311,12 @@ public class CutsceneManager : MonoBehaviour
 
     private void OnCutsceneFinished(PlayableDirector director)
     {
+        // Hide subtitles panel when cutscene finishes
+        if (subtitlesPanel != null)
+        {
+            subtitlesPanel.SetActive(false);
+        }
+
         Debug.Log("Cutscene finished playing.");
         director.stopped -= OnCutsceneFinished; // Remove listener to avoid duplicate triggers
 
