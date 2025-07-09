@@ -17,6 +17,7 @@ public class CutsceneManager : MonoBehaviour
 
     [Header("Subtitles")]
     public GameObject subtitlesPanel;
+    private bool subtitlesEnabled;
     public SubtitleManager subtitleManager;
     [System.Serializable]
     public class CutsceneSubtitleMapping
@@ -289,7 +290,7 @@ public class CutsceneManager : MonoBehaviour
         currentCutscene.Play();
 
         // Enable subtitles panel if assigned
-        if (subtitlesPanel != null)
+        if (subtitlesPanel != null && subtitlesEnabled)
         {
             subtitlesPanel.SetActive(true);
         }
@@ -775,6 +776,8 @@ public class CutsceneManager : MonoBehaviour
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
+
+        ApplySavedSubtitleSetting();
     }
 
     // Play currently paused cutscene
@@ -818,5 +821,12 @@ public class CutsceneManager : MonoBehaviour
     {
         isPaused = false;
         UpdateButtonVisibility();
+    }
+
+    private void ApplySavedSubtitleSetting()
+    {
+        subtitlesEnabled = PlayerPrefs.GetInt("SubtitlesEnabled", 1) == 1;
+
+        Debug.Log("Subtitles setting loaded: " + subtitlesEnabled);
     }
 }
