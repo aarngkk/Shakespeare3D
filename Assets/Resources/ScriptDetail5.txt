@@ -1,42 +1,76 @@
 ACT 3 SCENE 5
 
-Juliet
+<u>Juliet</u>
 Good father, I beseech you on my knees,
 Hear me with patience but to speak a word.
 
-Capulet
+<i><size=75%>Good father, I’m begging you on my knees. 
+Please just listen to me for a few words.</size></i>
+
+<u>Capulet</u>
 Hang thee, young baggage. Disobedient wretch!
 I tell thee what. Get thee to church a Thursday,
 Or never after look me in the face.
+
+<i><size=75%>Damn you, useless girl! Disobedient wretch! I’ll tell you what. 
+Get yourself to the church on Thursday or never 
+look me in the face again.</size></i>
+
 Speak not, reply not, do not answer me.
-My fingers itch. Wife, we scarce thought us blessed
+My fingers itch. 
+
+<i><size=75%>Don’t speak to me, don’t reply, don’t answer. 
+I feel like I could hit you.</size></i> 
+
+Wife, we scarce thought us blessed
 That God had lent us but this only child;
 But now I see this one is one too much,
 And that we have a curse in having her.
 Out on her, hilding!
 
-Nurse
+<i><size=75%>My wife, we thought we had been meagerly blessed having just this 
+one child, but now I see that this one alone is too much, 
+and we’re cursed to have her. Curse you, you beast!</size></i>
+
+<u>Nurse</u>
 God in heaven bless her!
 You are to blame, my lord, to rate her so.
 
-Capulet
+<i><size=75%>God in heaven bless her! You’re wrong, my lord, 
+to yell at her like that.</size></i>
+
+<u>Capulet</u>
 And why, my lady wisdom? Hold your tongue,
 Good Prudence, smatter with your gossips, go.
 
-Nurse
+<i><size=75%>Why, are you the Lady of Wisdom? Hold your tongue. 
+Go talk to your fellow gossips somewhere, go.</size></i>
+
+<u>Nurse</u>
 I speak no treason.
 
-Capulet
+<i><size=75%>I said nothing wrong.</size></i>
+
+<u>Capulet</u>
 O, God ye good e'en.
 
-Nurse
+<i><size=75%>Oh God, good afternoon already!</size></i>
+
+<u>Nurse</u>
 May not one speak?
 
-Capulet
+<i><size=75%>Am I not allowed to speak?</size></i>
+
+<u>Capulet</u>
 Peace, you mumbling fool!
 Utter your gravity o'er a gossip's bowl,
 For here we need it not.
 
-Lady Capulet
+<i><size=75%>Quiet, you mumbling fool! Go spread your wise 
+advice to some gossip, we don’t need that here.</size></i>
+
+<u>Lady Capulet</u>
 You are too hot.
+
+<i><size=75%>You’re too angry.</size></i>
 

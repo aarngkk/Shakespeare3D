@@ -1,43 +1,85 @@
 ACT 3 SCENE 5
 
-Juliet
+<u>Juliet</u>
 Is there no pity sitting in the clouds
 That sees into the bottom of my grief?
 O sweet my mother, cast me not away!
+
+<i><size=75%>Is there no pity in heaven that can see the depths of my 
+grief? Oh my sweet mother, don’t cast me away!</size></i> 
+
 Delay this marriage for a month, a week;
 Or if you do not, make the bridal bed                            
 In that dim monument where Tybalt lies.
 
-Lady Capulet
+<i><size=75%>Delay this marriage for a month, even a week. 
+If you don’t you should make my bridal bed 
+in the crypt where Tybalt lies.</size></i>
+
+<u>Lady Capulet</u>
 Talk not to me, for I'll not speak a word.
 Do as thou wilt, for I have done with thee.
+
+<i><size=75%>Don’t talk to me, you won’t get a word in return. 
+Do what you want, for I’m done with you.</size></i>
 [Exit]
 
-Juliet
+<u>Juliet</u>
 O God! O nurse, how shall this be prevented?
 My husband is on earth, my faith in heaven.
 How shall that faith return again to earth,
 Unless that husband send it me from heaven
 By leaving earth? Comfort me, counsel me.
+
+<i><size=75%>Oh God! Nurse, how can we prevent this? My husband is alive 
+and I’m married to him in the eyes of God. The only 
+way not to be married is if he were dead in heaven 
+instead of here on the earth. Help me, advise me.</size></i>
+
 Alack, alack, that heaven should practice stratagems
 Upon so soft a subject as myself!                                  
 What say'st thou? Hast thou not a word of joy?
 Some comfort, nurse.
 
-Nurse
+<i><size=75%>How can heaven inflict such a horrible situation on a young 
+girl like me! What do you think? Do you have any 
+words of comfort? I need some 
+comforting, sweet nurse.</size></i>
+
+<u>Nurse</u>
 Faith, here it is.
 Romeo is banishèd; and all the world to nothing
 That he dares ne'er come back to challenge you;
+
+<i><size=75%>Well this is it. Romeo’s been banished, and it’s almost 
+positive that he’ll never dare to come back and 
+challenge this marriage.</size></i> 
+
 Or if he do, it needs must be by stealth.
 Then, since the case so stands as now it doth,
 I think it best you married with the County.
 
+<i><size=75%>Or, if he does, he’ll have to do it by stealth. Now, 
+given the situation, I think it would 
+be best if you married the count.</size></i>
+
 O, he's a lovely gentleman!
 Romeo's a dish-clout to him. An eagle, madam,
 Hath not so green, so quick, so fair an eye                    
-As Paris hath. Beshrew my very heart,
+As Paris hath. 
+
+<i><size=75%>Oh, but he’s a lovely gentleman! Romeo’s just a dishcloth 
+compared to him! An eagle doesn’t have as good 
+an eye as Paris does.</size></i>
+
+Beshrew my very heart,
 I think you are happy in this second match,
 For it excels your first. Or if it did not,
 Your first is dead; or 'twere as good he were,
 As living here, and you no use of him.
+
+<i><size=75%>By my heart I think you’ll be happier with this second 
+match because it’s better than your first. Or, if it’s 
+not, your first love is dead, or it’s as if he were, 
+since you’re no use to him living here.</size></i>
 

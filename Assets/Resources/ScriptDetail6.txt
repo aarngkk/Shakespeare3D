@@ -1,27 +1,62 @@
 ACT 3 SCENE 5
 
-Capulet
+<u>Capulet</u>
 God's bread, it makes me mad.
 Day, night, hour; tide, time; work, play;
 Alone, in company — still my care hath been
-To have her matched. And having now provided
+To have her matched. 
+
+<i><size=75%>I swear on the Holy Communion, this makes me mad. All day 
+and night, in work and play, time after time, alone and 
+in company, my goal has always been to have her married.</size></i>
+
+And having now provided
 A gentleman of noble parentage,
 Of fair demesnes, youthful, and nobly ligned,
 Stuffed, as they say, with honorable parts,
 Proportioned as one's thought would wish a man;
+
+<i><size=75%>And now I’ve provided a gentleman from a good family, 
+with a lovely estate, who is young and well brought up, 
+full to bursting with honor and as good-looking as you 
+could imagine.</size></i>
+
 And then to have a wretched puling fool,
 A whining maumet, in her fortune's tender,
-
 To answer 'I'll not wed, I cannot love,
 I am too young, I pray you pardon me'.
+
+<i><size=75%>And then after all of that to have a wretched, blubbering 
+fool, like a whiny baby, look at her good luck and say 
+“I won’t get married, I’m not in love, I’m too young, 
+sorry, forgive me.”</size></i>
+
 But, an you will not wed, I'll pardon you.
 Graze where you will, you shall not house with me.
 Look to't, think on't, I do not use to jest.
 Thursday is near; lay hand on heart, advise.
+
+<i><size=75%>Well, if you won’t get married, I’ll pardon you. 
+Go make your way as you wish, but you won’t live under 
+my roof. Think about it. Consider it carefully. I’m not 
+a joking man. Thursday is coming soon — put your hand 
+on your heart and take my advice.</size></i>
+
 An you be mine, I'll give you to my friend;
 An you be not, hang, beg, starve, die in the streets,
 For by my soul, I'll ne'er acknowledge thee,
 Nor what is mine shall never do thee good.
+
+<i><size=75%>If you want to be my child, I’ll give you away to Paris 
+in marriage. If you won’t marry him, get hanged, beg, 
+starve, go die in the streets, for I swear on my soul 
+I’ll never acknowledge you again, nor will I permit 
+any family to help you.</size></i>
+
 Trust to't, bethink you; I'll not be forsworn.
+
+<i><size=75%>Trust that I will keep my word. 
+I won’t go back on this promise.</size></i>
 [Exit]
+
 
