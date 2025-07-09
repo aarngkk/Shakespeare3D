@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11fcc6676c3e1904c8cd219824caa727, type: 3}
+  m_Name: Script3_Subtitles
+  m_EditorClassIdentifier: 
+  lines:
+  - timestamp: 1
+    text: 'Capulet: When the sun sets, the earth doth drizzle dew;'
+  - timestamp: 4.9
+    text: 'Capulet: But for the sunset of my brother''s son'
+  - timestamp: 7.7
+    text: 'Capulet: It rains downright.'
+  - timestamp: 10
+    text: 'Capulet: How now! A conduit, girl?'
+  - timestamp: 12.9
+    text: 'Capulet: What, still in tears?
+
+'
+  - timestamp: 15.85
+    text: 'Capulet: Evermore showering? In one little body'
+  - timestamp: 20
+    text: 'Capulet: Thou counterfeits a bark, a sea, a wind;
+
+'
+  - timestamp: 24.75
+    text: 'Capulet: For still thy eyes, which I may call the sea,'
+  - timestamp: 27.95
+    text: 'Capulet: Do ebb and flow with tears; the bark thy body is,'
+  - timestamp: 32.7
+    text: 'Capulet: Sailing in this salt flood; the winds, thy sighs,'
+  - timestamp: 38.9
+    text: 'Capulet: Who, raging with thy tears, and they with them,'
+  - timestamp: 42.45
+    text: "Capulet: Without a sudden calm, will overset thy tempest-toss\xE8d body."
+  - timestamp: 47.35
+    text: 'Capulet: How now, wife, Have you delivered to her our decree?
+
+'
+  - timestamp: 52
+    text: "Lady Capulet: Ay, sir; but she will none, she gives you thanks.\r"
+  - timestamp: 57.45
+    text: "Lady Capulet: I would the fool were married to her grave!\r"
+  - timestamp: 61.7
+    text: "Capulet: Soft, take me with you, take me with you, wife.\r\r"
+  - timestamp: 65.45
+    text: 'Capulet: How, will she none? Doth she not give us thanks?'
+  - timestamp: 68.5
+    text: 'Capulet: Is she not proud? Doth she not count her blest,'
+  - timestamp: 74.35
+    text: 'Capulet: Unworthy as she is,'
+  - timestamp: 76.05
+    text: 'Capulet: That we have wrought so worthy a gentleman to be her bridegroom?'

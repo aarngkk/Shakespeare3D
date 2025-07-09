@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11fcc6676c3e1904c8cd219824caa727, type: 3}
+  m_Name: Script8_Subtitles
+  m_EditorClassIdentifier: 
+  lines:
+  - timestamp: 0.05
+    text: 'Juliet: Speakest thou from thy heart?'
+  - timestamp: 2.7
+    text: 'Nurse: And from my soul too, else beshrew them both.'
+  - timestamp: 7
+    text: 'Juliet: Amen!'
+  - timestamp: 9.05
+    text: 'Nurse: What?'
+  - timestamp: 10.93
+    text: 'Juliet: Well, thou hast comforted me marvelous much.'
+  - timestamp: 15.12
+    text: 'Juliet: Go in. And tell my lady I am gone,'
+  - timestamp: 17.43
+    text: 'Juliet: Having displeased my father,'
+  - timestamp: 19.77
+    text: 'Juliet: To Laurence'' cell to make confession and to be absolved.'
+  - timestamp: 24.45
+    text: 'Nurse: Marry, I will, and this is wisely done.'
+  - timestamp: 29.65
+    text: 'Juliet: Ancient damnation! O most wicked fiend!
+
+'
+  - timestamp: 35.32
+    text: 'Juliet: Is it more sin to wish me thus forsworn,'
+  - timestamp: 38.57
+    text: 'Juliet: Or to dispraise my lord with that same tongue'
+  - timestamp: 42
+    text: 'Juliet: Which she hath praised him with above compare'
+  - timestamp: 44.45
+    text: 'Juliet: So many thousand times?'
+  - timestamp: 47.23
+    text: 'Juliet: Go, counselor; '
+  - timestamp: 48.85
+    text: 'Juliet: Thou and my bosom henceforth shall be twain.'
+  - timestamp: 52.4
+    text: 'Juliet: I''ll to the friar, to know his remedy.'
+  - timestamp: 55.3
+    text: 'Juliet: If all else fail, myself have power to die.'

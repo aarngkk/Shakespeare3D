@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11fcc6676c3e1904c8cd219824caa727, type: 3}
+  m_Name: Script6_Subtitles
+  m_EditorClassIdentifier: 
+  lines:
+  - timestamp: 0.52
+    text: 'Capulet: God''s bread, it makes me mad.'
+  - timestamp: 4.03
+    text: 'Capulet: Day, night, hour;'
+  - timestamp: 6.75
+    text: 'Capulet: Tide, time; work, play;
+
+'
+  - timestamp: 10.43
+    text: "Capulet: Alone, in company \u2014 \n"
+  - timestamp: 12.87
+    text: "Capulet: Still my care hath been to have her matched.\r \n"
+  - timestamp: 16.42
+    text: "Capulet: And having now provided a gentleman of noble parentage,\r "
+  - timestamp: 20.2
+    text: "Capulet: Of fair demesnes, youthful, and nobly ligned,\r "
+  - timestamp: 24.42
+    text: "Capulet: Stuffed, as they say, with honorable parts,\r "
+  - timestamp: 27.75
+    text: "Capulet: Proportioned as one's thought would wish a man;\r "
+  - timestamp: 31.33
+    text: "Capulet: And then to have a wretched puling fool,\r "
+  - timestamp: 34.38
+    text: "Capulet: A whining maumet, in her fortune's tender, to answer\r "
+  - timestamp: 38.07
+    text: "Capulet: 'I'll not wed, I cannot love,\r "
+  - timestamp: 40.8
+    text: "Capulet: I am too young, I pray you pardon me'. \r "
+  - timestamp: 44.78
+    text: 'Capulet: But, an you will not wed, I''ll pardon you.'
+  - timestamp: 48.25
+    text: 'Capulet: Graze where you will, you shall not house with me.'
+  - timestamp: 52.68
+    text: 'Capulet: Look to''t, think on''t, I do not use to jest.'
+  - timestamp: 57.35
+    text: 'Capulet: Thursday is near; lay hand on heart, advise.'
+  - timestamp: 61.53
+    text: 'Capulet: An you be mine, I''ll give you to my friend;'
+  - timestamp: 64.68
+    text: 'Capulet: An you be not, hang, beg, starve, die in the streets,'
+  - timestamp: 71.23
+    text: 'Capulet: For by my soul, I''ll ne''er acknowledge thee,'
+  - timestamp: 74.65
+    text: 'Capulet: Nor what is mine shall never do thee good.'
+  - timestamp: 77.8
+    text: 'Capulet: Trust to''t, bethink you; I''ll not be forsworn.'
+  - timestamp: 82.3
+    text: 

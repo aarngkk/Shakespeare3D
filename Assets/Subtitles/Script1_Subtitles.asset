@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11fcc6676c3e1904c8cd219824caa727, type: 3}
+  m_Name: Script1_Subtitles
+  m_EditorClassIdentifier: 
+  lines:
+  - timestamp: 1.4
+    text: 'Lady Capulet: Find thou the means, and I''ll find such a man.'
+  - timestamp: 4.9
+    text: 
+  - timestamp: 6.6
+    text: 'Lady Capulet: But now I''ll tell thee joyful tidings, girl.'
+  - timestamp: 10.9
+    text: 'Juliet: And joy comes well in such a needy time.'
+  - timestamp: 14
+    text: 'Juliet: What are they, beseech your ladyship?'
+  - timestamp: 16.4
+    text: 
+  - timestamp: 17.5
+    text: 'Lady Capulet: Well, well, thou hast a careful father, child;'
+  - timestamp: 21.8
+    text: 'Lady Capulet: One who, to put thee from thy heaviness,'
+  - timestamp: 25
+    text: 'Lady Capulet: Hath sorted out a sudden day of joy,'
+  - timestamp: 27.9
+    text: 'Lady Capulet: That thou expects not, nor I looked not for.'
+  - timestamp: 32.5
+    text: 'Juliet: Madam, in happy time. What day is that? '
+  - timestamp: 36.17
+    text: 
+  - timestamp: 37.3
+    text: 'Lady Capulet: Marry, my child, early next Thursday morn'
+  - timestamp: 41.2
+    text: 'Lady Capulet: The gallant, young, and noble gentleman,'
+  - timestamp: 44.4
+    text: 'Lady Capulet: The County Paris, at Saint Peter''s Church,'
+  - timestamp: 48.25
+    text: 'Lady Capulet: Shall happily make thee there a joyful bride.'
+  - timestamp: 52.25
+    text: 

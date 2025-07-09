@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11fcc6676c3e1904c8cd219824caa727, type: 3}
+  m_Name: Script7_Subtitles
+  m_EditorClassIdentifier: 
+  lines:
+  - timestamp: 0.27
+    text: 'Juliet: Is there no pity sitting in the clouds'
+  - timestamp: 2.3
+    text: 'Juliet: That sees into the bottom of my grief?'
+  - timestamp: 5.4
+    text: 'Juliet: O sweet my mother, cast me not away!'
+  - timestamp: 9.12
+    text: 'Juliet: Delay this marriage for a month, a week;'
+  - timestamp: 13.02
+    text: 'Juliet: Or if you do not, '
+  - timestamp: 14.62
+    text: 'Juliet: Make the bridal bed in that dim monument where Tybalt lies.'
+  - timestamp: 19.4
+    text: 'Juliet: Make the bridal bed in that dim monument where Tybalt lies.'
+  - timestamp: 19.4
+    text: 'Lady Capulet: Talk not to me, for I''ll not speak a word.'
+  - timestamp: 23.38
+    text: 'Lady Capulet: Do as thou wilt, for I have done with thee.'
+  - timestamp: 23.38
+    text: 'Lady Capulet: Do as thou wilt, for I have done with thee.'
+  - timestamp: 27.5
+    text: 'Juliet: O God!
+
+'
+  - timestamp: 29.63
+    text: 'Juliet: O nurse, how shall this be prevented?'
+  - timestamp: 33.3
+    text: 'Juliet: My husband is on earth, my faith in heaven.'
+  - timestamp: 37.45
+    text: 'Juliet: How shall that faith return again to earth,'
+  - timestamp: 40.5
+    text: 'Juliet: Unless that husband send it me from heaven'
+  - timestamp: 43.43
+    text: 'Juliet: By leaving earth? '
+  - timestamp: 45.4
+    text: 'Juliet: Comfort me, counsel me.'
+  - timestamp: 48.45
+    text: 'Juliet: Alack, alack, that heaven should practice stratagems'
+  - timestamp: 52.25
+    text: 'Juliet: Upon so soft a subject as myself!'
+  - timestamp: 55.9
+    text: 'Juliet: What say''st thou? Hast thou not a word of joy?'
+  - timestamp: 60.3
+    text: 'Juliet: Some comfort, nurse.'
+  - timestamp: 62.88
+    text: 'Nurse: Faith, here it is.'
+  - timestamp: 66.43
+    text: "Nurse: Romeo is banish\xE8d; and all the world to nothing"
+  - timestamp: 71.17
+    text: 'Nurse: That he dares ne''er come back to challenge you;'
+  - timestamp: 74.38
+    text: 'Nurse: Or if he do, it needs must be by stealth.'
+  - timestamp: 78.3
+    text: 'Nurse: Then, since the case so stands as now it doth,'
+  - timestamp: 82.22
+    text: 'Nurse: I think it best you married with the County.'
+  - timestamp: 85.13
+    text: 'Nurse: O, he''s a lovely gentleman!'
+  - timestamp: 87.85
+    text: 'Nurse: Romeo''s a dish-clout to him. '
+  - timestamp: 90.88
+    text: 'Nurse: An eagle, madam, hath not so green, so quick,'
+  - timestamp: 95.75
+    text: 'Nurse: So fair an eye as Paris hath.'
+  - timestamp: 99.58
+    text: 'Nurse: Beshrew my very heart, I think you are happy in this second match,'
+  - timestamp: 104.7
+    text: 'Nurse: For it excels your first. '
+  - timestamp: 106.8
+    text: 'Nurse: Or if it did not, your first is dead;'
+  - timestamp: 110.45
+    text: 'Nurse: Or ''twere as good he were,'
+  - timestamp: 112.23
+    text: 'Nurse: As living here, and you no use of him.
+
+'

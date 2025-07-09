@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11fcc6676c3e1904c8cd219824caa727, type: 3}
+  m_Name: Script5_Subtitles
+  m_EditorClassIdentifier: 
+  lines:
+  - timestamp: 0.65
+    text: 'Juliet: Good father, I beseech you on my knees,'
+  - timestamp: 4.05
+    text: 'Juliet: Hear me with patience but to speak a word.'
+  - timestamp: 7.85
+    text: 'Capulet: Hang thee, young baggage. Disobedient wretch!'
+  - timestamp: 11.9
+    text: 'Capulet: I tell thee what. Get thee to church a Thursday,'
+  - timestamp: 15.8
+    text: 'Capulet: Or never after look me in the face.'
+  - timestamp: 18.65
+    text: 'Capulet: Speak not, reply not, do not answer me.'
+  - timestamp: 22.4
+    text: 'Capulet: My fingers itch.'
+  - timestamp: 24.95
+    text: 'Capulet: Wife, we scarce thought us blessed'
+  - timestamp: 27.55
+    text: 'Capulet: That God had lent us but this only child;'
+  - timestamp: 31.1
+    text: 'Capulet: But now I see this one is one too much,'
+  - timestamp: 33.95
+    text: 'Capulet: And that we have a curse in having her.'
+  - timestamp: 36.2
+    text: 'Capulet: Out on her, hilding!'
+  - timestamp: 38.95
+    text: 'Nurse: God in heaven bless her!'
+  - timestamp: 41
+    text: 'Nurse: You are to blame, my lord, to rate her so.'
+  - timestamp: 44.55
+    text: 'Capulet: And why, my lady wisdom?'
+  - timestamp: 46.95
+    text: 'Capulet: Hold your tongue, good Prudence,'
+  - timestamp: 49.3
+    text: 'Capulet: Smatter with your gossips, go.'
+  - timestamp: 51.9
+    text: 'Nurse: I speak no treason.'
+  - timestamp: 53.65
+    text: 'Capulet: O, God ye good e''en.'
+  - timestamp: 55.55
+    text: 'Nurse: May not one speak?'
+  - timestamp: 57.5
+    text: 'Capulet: Peace, you mumbling fool!'
+  - timestamp: 59.9
+    text: 'Capulet: Utter your gravity o''er a gossip''s bowl,'
+  - timestamp: 62.7
+    text: 'Capulet: For here we need it not.'
+  - timestamp: 65.05
+    text: 'Lady Capulet: You are too hot.'
+  - timestamp: 66.35
+    text: 
