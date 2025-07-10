@@ -10,6 +10,8 @@ public class SavedScenesMenu : MonoBehaviour
     public GameObject sceneButtonPrefab; //Prefab for each filename button
     public Transform contentParent; // Parent object to hold all instantiated buttons
     private VerticalLayoutGroup layoutGroup; // Layout group used to adjust spacing
+    [SerializeField] private float layoutSpacing;
+    [SerializeField] private ScrollRect scrollRect;
 
     public GameObject sceneOptionsPanel; // Panel shown when a scene is selected
     public TMP_Text sceneNameText; // Text showing the selected scene name
@@ -45,7 +47,7 @@ public class SavedScenesMenu : MonoBehaviour
         // Set spacing between buttons, if layout group is present
         if (layoutGroup != null)
         {
-            layoutGroup.spacing = 80f; 
+            layoutGroup.spacing = layoutSpacing; 
         }
 
         allSceneButtons.Clear(); // Reset button tracking list
@@ -60,12 +62,15 @@ public class SavedScenesMenu : MonoBehaviour
             allSceneButtons.Add(buttonComponent);
 
             // Add listener to show options when button is clicked
-            newButton.GetComponent<Button>().onClick.AddListener(() => ShowSceneOptions(sceneName));
+            string sceneNameCopy = sceneName;
+            newButton.GetComponent<Button>().onClick.AddListener(() => ShowSceneOptions(sceneNameCopy));
         }
 
         // Force layout to rebuild so new buttons are properly arranged
          LayoutRebuilder.ForceRebuildLayoutImmediate(contentParent.GetComponent<RectTransform>());
-   
+
+        // Reset scroll to top
+        scrollRect.verticalNormalizedPosition = 1f;
     }
 
      // Displays the pop-up panel for the selected scene
@@ -78,7 +83,7 @@ public class SavedScenesMenu : MonoBehaviour
         sceneOptionsPanel.SetActive(true);
         
         // Disable all scene buttons to prevent overlapping input
-        SetSceneButtonsInteractable(false);
+        //SetSceneButtonsInteractable(false);
         
         // Remove previous listeners to avoid stacking
         playButton.onClick.RemoveAllListeners();
