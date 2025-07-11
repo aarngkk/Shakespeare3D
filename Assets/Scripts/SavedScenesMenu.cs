@@ -14,8 +14,8 @@ public class SavedScenesMenu : MonoBehaviour
     [SerializeField] private ScrollRect scrollRect;
 
     public GameObject sceneOptionsPanel; // Panel shown when a scene is selected
-    public TMP_Text sceneNameText; // Text showing the selected scene name
-    public Button playButton, editButton, backButton; // UI Buttons for scene actions
+    public TMP_Text sceneNameText, playConfirmButtonText, deleteCancelButtonText; // Text showing the selected scene name
+    public Button playConfirmButton, deleteCancelButton; // UI Buttons for scene actions
     private string selectedSceneName; // Name of the scene currently selected
 
     private List<Button> allSceneButtons = new List<Button>(); // List to keep track of all scene buttons
@@ -32,7 +32,13 @@ public class SavedScenesMenu : MonoBehaviour
         sceneOptionsPanel.SetActive(false);
     }
 
-     // Creates buttons for all saved scenes
+    void OnEnable()
+    {
+        // When this menu is re-shown, always hide the scene options popup
+        sceneOptionsPanel.SetActive(false);
+    }
+
+    // Creates buttons for all saved scenes
     public void PopulateSavedScenes()
     {
         // Clear existing buttons
@@ -73,26 +79,25 @@ public class SavedScenesMenu : MonoBehaviour
         scrollRect.verticalNormalizedPosition = 1f;
     }
 
-     // Displays the pop-up panel for the selected scene
+     // Displays text pop-up for the selected scene
     public void ShowSceneOptions(string sceneName) {
         selectedSceneName = sceneName;
-        sceneNameText.text = "Would you like to play " + sceneName + "?";
+        sceneNameText.text = "What would you like to do with \"" + sceneName + "\"?";
         
         Debug.Log("Opening pop-up for: " + sceneName);
 
+        playConfirmButtonText.text = "Play";
+        deleteCancelButtonText.text = "Delete";
+
         sceneOptionsPanel.SetActive(true);
         
-        // Disable all scene buttons to prevent overlapping input
-        //SetSceneButtonsInteractable(false);
-        
         // Remove previous listeners to avoid stacking
-        playButton.onClick.RemoveAllListeners();
-        backButton.onClick.RemoveAllListeners();
+        playConfirmButton.onClick.RemoveAllListeners();
+        deleteCancelButton.onClick.RemoveAllListeners();
 
         // Assign new listeners for this selected scene
-        playButton.onClick.AddListener(() => LoadReplayScene(sceneName));
-        backButton.onClick.AddListener(() => CloseSceneOptions());
-
+        playConfirmButton.onClick.AddListener(() => LoadReplayScene(sceneName));
+        deleteCancelButton.onClick.AddListener(() => ShowDeleteConfirmation(sceneName));
     }
     
     // Loads the scene playback UI for the selected scene
@@ -106,6 +111,48 @@ public class SavedScenesMenu : MonoBehaviour
          // Load the main replay scene
         SceneManager.LoadScene("Play All Scenes"); 
     }
+
+    // Displays confirmation to delete save file
+    private void ShowDeleteConfirmation(string sceneName)
+    {
+        selectedSceneName = sceneName;
+        sceneNameText.text = "Are you sure you want to delete \"" + sceneName + "\"?";
+
+        // Change button text for delete confirmation menu
+        playConfirmButtonText.text = "Delete";
+        deleteCancelButtonText.text = "Cancel";
+
+        // Remove previous listeners to avoid stacking
+        playConfirmButton.onClick.RemoveAllListeners();
+        deleteCancelButton.onClick.RemoveAllListeners();
+
+        // Assign new listeners for this selected scene
+        playConfirmButton.onClick.AddListener(() => DeleteSave(sceneName));
+        deleteCancelButton.onClick.AddListener(() => CloseSceneOptions());
+    }
+
+    // Deletes a saved scene file
+    private void DeleteSave(string sceneName)
+    {
+        string savePath = Path.Combine(Application.persistentDataPath, "SavedScenes", sceneName + ".log");
+
+        if (File.Exists(savePath))
+        {
+            File.Delete(savePath);
+            Debug.Log("Deleted save file: " + sceneName);
+        }
+        else
+        {
+            Debug.LogWarning($"Save file not found : {savePath}");
+        }
+
+        // Refresh the UI list
+        PopulateSavedScenes();
+
+        // Hide the options panel if it was open
+        sceneOptionsPanel.SetActive(false);
+    }
+
 
     // Hides the options panel and re-enables scene buttons
     public void CloseSceneOptions()
