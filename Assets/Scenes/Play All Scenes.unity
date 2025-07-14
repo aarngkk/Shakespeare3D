@@ -1288,6 +1288,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Script5ChoicePopup
       objectReference: {fileID: 0}
+    - target: {fileID: 3833329521736829930, guid: d50552af2e88ad0498c8bbb0cc29f634, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6697880965225837590, guid: d50552af2e88ad0498c8bbb0cc29f634, type: 3}
       propertyPath: m_text
       value: Stand
