@@ -177,21 +177,6 @@ public class SceneSaverUI : MonoBehaviour
 
     public void OnBackButtonPressed()
     {
-        //prevent leaving without saving if user typed a name but didn’t save
-        if (saveButton != null) {
-            if (saveButton.interactable == true)
-            {
-                if (string.IsNullOrEmpty(sceneNameInputField.text) || !sceneIsSaved)
-                {
-                    if (savePanel != null && !savePanel.activeSelf)
-                    {
-                        OpenLeavePanel();
-                    }
-                    return; // Prevent navigating away until the scene is saved
-                }
-            }
-        }
-        
         // Go to main menu
         SceneManager.LoadScene("Main Menu");
     }
