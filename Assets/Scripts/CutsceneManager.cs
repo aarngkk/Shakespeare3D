@@ -10,7 +10,7 @@ public class CutsceneManager : MonoBehaviour
     private string SavePath => Application.persistentDataPath + "/SavedScenes/"; // Path for saving user scene logs
     public string logFileName; // Filename used when saving choice logs
     private bool isPaused = false;// Tracks if the current cutscene is paused
-
+    
     // Playback control buttons
     public Button playButton;
     public Button pauseButton;
@@ -35,7 +35,7 @@ public class CutsceneManager : MonoBehaviour
 
     private bool isCutscene7Started = false; // New flag to track Cutscene7 state
     public bool IsCutscene7Started() => isCutscene7Started; // Public getter for Cutscene 7 state
-
+    
     public GameObject Script1ChoicePopUp; // UI popup shown after script 1
 
     // Game objects used for player interaction zones
@@ -91,7 +91,7 @@ public class CutsceneManager : MonoBehaviour
     [SerializeField] private Button standButton;
 
     // Cutscene Timeline references for script 5
-    [Header("Script 5")]
+    [Header("Script 5")] 
     public PlayableDirector julietKneelsCapuletCalm;
     public PlayableDirector julietKneelsCapuletAngry;
     public PlayableDirector julietStandsCapuletCalm;
@@ -102,7 +102,7 @@ public class CutsceneManager : MonoBehaviour
     [SerializeField] private Button remainAngryButton;
 
     // Cutscene Timeline references for script 6
-    [Header("Script 6")]
+    [Header("Script 6")] 
     public PlayableDirector capuletCalmsDownCutscene;
     public PlayableDirector capuletRemainsAngryCutscene;
 
@@ -131,7 +131,7 @@ public class CutsceneManager : MonoBehaviour
     private Stack<string> choiceHistory = new Stack<string>(); // Stores past choices
 
     public bool isReplayMode = false; // Enables replaying cutscenes from logs
-    private bool isCutscene6Finished = false;
+    private bool isCutscene6Finished = false; 
     public bool IsCutscene6Finished() => isCutscene6Finished;
 
     public GameObject FinishedPopUp; // End-of-scene UI popup
@@ -142,8 +142,8 @@ public class CutsceneManager : MonoBehaviour
     void Start()
     {
         // Set initial button visibility
-        playButton.gameObject.SetActive(false);
-        pauseButton.gameObject.SetActive(true);
+        playButton.gameObject.SetActive(false); 
+        pauseButton.gameObject.SetActive(true); 
 
         // Attach play/pause events
         playButton.onClick.AddListener(PlayCutscene);
@@ -156,9 +156,9 @@ public class CutsceneManager : MonoBehaviour
 
         // Restore animations to active state
         RestoreCharacterAnimation();
-        currentCutsceneType = cutsceneType;
+        currentCutsceneType = cutsceneType; 
 
-        // Pre-cutscene setup for Script 1 (Bed/Dresser selection)
+       // Pre-cutscene setup for Script 1 (Bed/Dresser selection)
         if (cutsceneType == "Bed" || cutsceneType == "Dresser")
         {
             isCutscene1Started = true;
@@ -178,12 +178,12 @@ public class CutsceneManager : MonoBehaviour
             }
 
             // Hide script 1 popup if active
-            if (Script1ChoicePopUp != null) Script1ChoicePopUp.SetActive(false);
+            if (Script1ChoicePopUp!=null) Script1ChoicePopUp.SetActive(false);
         }
 
         // Setup for Script 7 emotion choices (Bed/Carpet with Desperate/Sorrowful)
         if (cutsceneType == "BedDesperate" || cutsceneType == "BedSorrowful" ||
-            cutsceneType == "CarpetDesperate" || cutsceneType == "CarpetSorrowful")
+            cutsceneType == "CarpetDesperate" || cutsceneType == "CarpetSorrowful" )
         {
 
             // Clear snap points and reset character positions
@@ -215,16 +215,16 @@ public class CutsceneManager : MonoBehaviour
             case "BedAngry": currentCutscene = bedAngryCutscene; break;
             case "DresserSad": currentCutscene = dresserSadCutscene; break;
             case "DresserAngry": currentCutscene = dresserAngryCutscene; break;
-            case "CapuletSympathetic": currentCutscene = capuletSympatheticCutscene; break;
+            case "CapuletSympathetic":currentCutscene = capuletSympatheticCutscene; break;
             case "CapuletAnnoyed": currentCutscene = capuletAnnoyedCutscene; break;
             case "CapuletEnraged": currentCutscene = capuletEnragedCutscene; break;
             case "CapuletComposed": currentCutscene = capuletComposedCutscene; break;
             case "JulietKneelsCapuletCalm": currentCutscene = julietKneelsCapuletCalm; break;
             case "JulietKneelsCapuletAngry": currentCutscene = julietKneelsCapuletAngry; break;
             case "JulietStandsCapuletCalm": currentCutscene = julietStandsCapuletCalm; break;
-            case "JulietStandsCapuletAngry": currentCutscene = julietStandsCapuletAngry; break;
-            case "CapuletCalmsDown": currentCutscene = capuletCalmsDownCutscene; break;
-            case "CapuletRemainsAngry": currentCutscene = capuletRemainsAngryCutscene; break;
+            case "JulietStandsCapuletAngry":currentCutscene = julietStandsCapuletAngry;break;
+            case "CapuletCalmsDown": currentCutscene = capuletCalmsDownCutscene;break;
+            case "CapuletRemainsAngry":currentCutscene = capuletRemainsAngryCutscene;break;
             case "BedDesperate": currentCutscene = bedDesperateCutscene; break;
             case "BedSorrowful": currentCutscene = bedSorrowfulCutscene; break;
             case "CarpetDesperate": currentCutscene = carpetDesperateCutscene; break;
@@ -271,7 +271,6 @@ public class CutsceneManager : MonoBehaviour
         {
             choiceHistory.Push(currentCutscene.name);
             choicesMade.Add(cutsceneType);
-            Autosave();
             currentCutscene.stopped += OnCutsceneFinished;
         }
 
@@ -286,7 +285,7 @@ public class CutsceneManager : MonoBehaviour
                 onCutsceneEnd?.Invoke();
             };
         }
-
+        
         // Start the cutscene playback
         currentCutscene.Play();
 
@@ -356,11 +355,11 @@ public class CutsceneManager : MonoBehaviour
         }
         else if (currentCutscene == capuletCalmsDownCutscene || currentCutscene == capuletRemainsAngryCutscene)
         {
-            // Prepare for Script 7 interaction after Cutscene 6
+             // Prepare for Script 7 interaction after Cutscene 6
             isCutscene6Finished = true;
             Debug.Log("Cutscene 6 finished. Ready for script 7 choices.");
 
-            if (script7PositionPanel != null) script7PositionPanel.SetActive(true);
+            if(script7PositionPanel!=null) script7PositionPanel.SetActive(true);
 
             if (carpetObject != null)
             {
@@ -393,7 +392,7 @@ public class CutsceneManager : MonoBehaviour
         }
     }
 
-    // Disables character animations to preserve their final pose
+     // Disables character animations to preserve their final pose
     private void FreezeCharacterPose()
     {
         Animator julietAnimator = GameObject.Find("Juliet")?.GetComponent<Animator>();
@@ -593,9 +592,9 @@ public class CutsceneManager : MonoBehaviour
             Debug.LogWarning("No choices have been made yet. Nothing to save.");
             return;
         }
-        if (string.IsNullOrWhiteSpace(logFileName))
+       if (string.IsNullOrWhiteSpace(logFileName))
         {
-            logFileName = "default_log"; // Fallback filename
+        logFileName = "default_log"; // Fallback filename
         }
         try
         {
@@ -829,26 +828,5 @@ public class CutsceneManager : MonoBehaviour
         subtitlesEnabled = PlayerPrefs.GetInt("SubtitlesEnabled", 1) == 1;
 
         Debug.Log("Subtitles setting loaded: " + subtitlesEnabled);
-    }
-
-    // Autosave everytime a user choice is made
-    private void Autosave()
-    {
-        if (choicesMade.Count == 0)
-        {
-            Debug.LogWarning("No choices to autosave.");
-            return;
-        }
-
-        string autosaveFilePath = SavePath + "Autosave.log";
-        try
-        {
-            File.WriteAllLines(autosaveFilePath, choicesMade);
-            Debug.Log($"Autosaved to: {autosaveFilePath}");
-        }
-        catch (System.Exception e)
-        {
-            Debug.LogError($"Failed to write autosave file: {e.Message}");
-        }
     }
 }
