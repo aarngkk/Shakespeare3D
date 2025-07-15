@@ -107,6 +107,14 @@ public class SceneSaverUI : MonoBehaviour
             return;
         }
 
+        // Prevent save file being named "Autosave"
+        if (string.Equals(sceneName, "Autosave", System.StringComparison.OrdinalIgnoreCase))
+        {
+            if (errorMessageText != null)
+                errorMessageText.text = "Scene name \"Autosave\" is not allowed.";
+            return;
+        }
+
         // Hide the finished popup if it's open
         if (cutsceneManager != null && cutsceneManager.FinishedPopUp != null && cutsceneManager.FinishedPopUp.activeSelf)
         {
@@ -187,7 +195,6 @@ public class SceneSaverUI : MonoBehaviour
         SceneManager.LoadScene("Main Menu");
     }
 
-    
     public void OpenLeavePanel()
     {
         // Save undo button state
