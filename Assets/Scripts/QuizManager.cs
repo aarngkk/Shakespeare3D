@@ -55,21 +55,46 @@ public class QuizManager : MonoBehaviour
 
     private void SetAnswer()
     {
+        var answerPairs = new List<(string answer, bool isCorrect)>();
+
+        for (int i = 0; i < questionsAndAnswers[currentQuestionIndex].answers.Length; i++)
+        {
+            bool isCorrect = (questionsAndAnswers[currentQuestionIndex].correctAnswer == i + 1);
+            answerPairs.Add((questionsAndAnswers[currentQuestionIndex].answers[i], isCorrect));
+        }
+
+        Shuffle(answerPairs);
+
         for (int i = 0; i < options.Length; i++)
         {
-            options[i].GetComponent<Image>().color = options[i].GetComponent<AnswerScript>().startColor;
-
+            var answerScript = options[i].GetComponent<AnswerScript>();
+            var image = options[i].GetComponent<Image>();
             var text = options[i].GetComponentInChildren<TMP_Text>();
-            text.color = options[i].GetComponent<AnswerScript>().startTextColor;
 
-            options[i].GetComponent<AnswerScript>().isCorrect = false;
-            options[i].transform.GetChild(0).GetComponent<TMP_Text>().text = questionsAndAnswers[currentQuestionIndex].answers[i];
+            // Reset colors
+            image.color = answerScript.startColor;
+            text.color = answerScript.startTextColor;
 
-            if (questionsAndAnswers[currentQuestionIndex].correctAnswer == i+1)
-            {
-                options[i].GetComponent<AnswerScript>().isCorrect = true;
-            }
+            // Set text and correctness
+            text.text = answerPairs[i].answer;
+            answerScript.isCorrect = answerPairs[i].isCorrect;
         }
+
+        //for (int i = 0; i < options.Length; i++)
+        //{
+        //    options[i].GetComponent<Image>().color = options[i].GetComponent<AnswerScript>().startColor;
+
+        //    var text = options[i].GetComponentInChildren<TMP_Text>();
+        //    text.color = options[i].GetComponent<AnswerScript>().startTextColor;
+
+        //    options[i].GetComponent<AnswerScript>().isCorrect = false;
+        //    options[i].transform.GetChild(0).GetComponent<TMP_Text>().text = questionsAndAnswers[currentQuestionIndex].answers[i];
+
+        //    if (questionsAndAnswers[currentQuestionIndex].correctAnswer == i+1)
+        //    {
+        //        options[i].GetComponent<AnswerScript>().isCorrect = true;
+        //    }
+        //}
     }
 
     private void GenerateQuestion()
@@ -112,6 +137,17 @@ public class QuizManager : MonoBehaviour
         {
             var button = option.GetComponent<Button>();
             if (button) button.interactable = state;
+        }
+    }
+
+    private void Shuffle<T>(List<T> list)
+    {
+        for (int i = 0; i < list.Count; i++)
+        {
+            int rnd = Random.Range(i, list.Count);
+            T temp = list[i];
+            list[i] = list[rnd];
+            list[rnd] = temp;
         }
     }
 }
