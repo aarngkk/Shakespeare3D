@@ -15,10 +15,22 @@ public class MainMenu : MonoBehaviour
         }
     }
 
+    // Loads the "Main Menu"
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+
     // Loads the "New Scene" menu
     public void CreateNewScene()
     {
         SceneManager.LoadScene("New Scene");
+    }
+
+    // Loads the "Quiz Scene" menu
+    public void LoadQuizScene()
+    {
+        SceneManager.LoadScene("Quiz Scene");
     }
 
     // Handles quitting the application
