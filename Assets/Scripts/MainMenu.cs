@@ -1,10 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField] private GameObject quizMenu;
+    [SerializeField] private GameObject quizButton;
+    [SerializeField] private GameObject quizButtonGreyPanel;
+    [SerializeField] private Color quizButtonGreyedOut;
+    [SerializeField] private Color quizButtonTextGreyedOut;
+    [SerializeField] private GameObject quizUnlockText;
+    [SerializeField] private float quizUnlockTextDuration;
+
+    private void Start()
+    {
+        Button button = quizButton.GetComponent<Button>();
+        button.onClick.AddListener(ShowQuizUnlockText);
+
+        if (PlayerPrefs.GetInt("QuizButtonEnabled") == 1)
+        {
+            
+            quizButton.GetComponent<Image>().color = quizButtonGreyedOut;
+            quizButton.GetComponentInChildren<TMP_Text>().color = quizButtonTextGreyedOut;
+            button.onClick.RemoveAllListeners();
+            button.onClick.AddListener(ShowQuizMenu);
+        }
+    }
+
+    private void OnEnable()
+    {
+        quizUnlockText.SetActive(false);
+    }
+
     private void Awake()
     {
         if (PlayerPrefs.HasKey("GraphicsQuality"))
@@ -40,4 +70,23 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
+    private void ShowQuizMenu()
+    {
+        this.gameObject.SetActive(false);
+        quizMenu.SetActive(true);
+    }
+
+    public void ShowQuizUnlockText()
+    {
+        StartCoroutine(WaitForQuizUnlockText());
+    }
+
+    IEnumerator WaitForQuizUnlockText()
+    {
+        quizUnlockText.SetActive(true);
+
+        yield return new WaitForSeconds(quizUnlockTextDuration);
+
+        quizUnlockText.SetActive(false);
+    }
 }

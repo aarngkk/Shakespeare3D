@@ -389,6 +389,7 @@ public class CutsceneManager : MonoBehaviour
         }
         else if (currentCutscene == julietSitCutscene || currentCutscene == julietWalkCutscene)
         {
+            PlayerPrefs.SetInt("QuizButtonEnabled", 1);
             ShowFinishPopUp(); // Final completion popup
         }
     }

@@ -79,22 +79,6 @@ public class QuizManager : MonoBehaviour
             text.text = answerPairs[i].answer;
             answerScript.isCorrect = answerPairs[i].isCorrect;
         }
-
-        //for (int i = 0; i < options.Length; i++)
-        //{
-        //    options[i].GetComponent<Image>().color = options[i].GetComponent<AnswerScript>().startColor;
-
-        //    var text = options[i].GetComponentInChildren<TMP_Text>();
-        //    text.color = options[i].GetComponent<AnswerScript>().startTextColor;
-
-        //    options[i].GetComponent<AnswerScript>().isCorrect = false;
-        //    options[i].transform.GetChild(0).GetComponent<TMP_Text>().text = questionsAndAnswers[currentQuestionIndex].answers[i];
-
-        //    if (questionsAndAnswers[currentQuestionIndex].correctAnswer == i+1)
-        //    {
-        //        options[i].GetComponent<AnswerScript>().isCorrect = true;
-        //    }
-        //}
     }
 
     private void GenerateQuestion()
