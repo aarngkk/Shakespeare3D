@@ -13,9 +13,6 @@ public class PlaySceneButton : MonoBehaviour
     void Start()
     {
         playButton.interactable = false; // Disable button at start
-
-        // Ensure outlines are enabled at start
-        SetOutlineState(true);
     }
 
     // Updates current snap point and button state

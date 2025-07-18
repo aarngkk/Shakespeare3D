@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class TutorialManager : MonoBehaviour
 {
@@ -16,13 +17,44 @@ public class TutorialManager : MonoBehaviour
     public ScriptSelectionManager scriptSelectionManager;
 
     // Static flag to track tutorial state globally
-    public static bool tutorialActive = true;
+    public static bool tutorialActive;
 
     // Parent container for all tutorial UI elements
     public GameObject instructionsOverlay;
 
+    // Time it takes curtains to draw
+    [SerializeField] private float curtainDrawTime;
+    [SerializeField] private GameObject tutorialButton;
+
     void Start()
     {
+        if (PlayerPrefs.GetInt("TutorialCompleted") != 1)
+        {
+            tutorialActive = true;
+
+            StartCoroutine(ShowFirstTimeTutorial());
+        }
+        else
+        {
+            StartCoroutine(ShowChoice1PopUp());
+        }
+
+    }
+
+    public void ShowTutorial(int startStep)
+    {
+        currentStep = startStep;
+
+        nextButton.onClick.RemoveAllListeners();
+        skipButton.onClick.RemoveAllListeners();
+
+        if (Script1ChoicePopUp != null)
+        {
+            Script1ChoicePopUp.SetActive(false);
+        }
+
+        instructionsOverlay.SetActive(true);
+
         // Hide all tutorial steps initially
         foreach (GameObject step in tutorialSteps)
             step.SetActive(false);
@@ -30,7 +62,7 @@ public class TutorialManager : MonoBehaviour
         // Activate first step if available
         if (tutorialSteps.Length > 0)
         {
-            tutorialSteps[0].SetActive(true);
+            tutorialSteps[startStep].SetActive(true);
         }
 
         // Setup button click listeners
@@ -50,6 +82,11 @@ public class TutorialManager : MonoBehaviour
         {
             tutorialSteps[currentStep].SetActive(true);
 
+            if (currentStep == 1)
+            {
+                EnableOutlines();
+            }
+
             // Special handling for step 6 (script selection)
             if (currentStep == 6 && scriptSelectionManager != null)
             {
@@ -66,11 +103,14 @@ public class TutorialManager : MonoBehaviour
             // Complete tutorial if no steps remain
             EndTutorial();
         }
+
+        Debug.Log("Current tutorial step: " + currentStep);
     }
 
     // Handles skip button click
     void OnSkipClicked()
     {
+        scriptSelectionManager.CloseScriptSelection();
         EndTutorial();
     }
 
@@ -96,5 +136,39 @@ public class TutorialManager : MonoBehaviour
 
         // Show first choice popup
         Script1ChoicePopUp.SetActive(true);
+
+        tutorialButton.SetActive(true);
+
+        PlayerPrefs.SetInt("TutorialCompleted", 1);
+    }
+
+    private void EnableOutlines()
+    {
+        Outline bedOutline = GameObject.FindWithTag("Bed")?.GetComponent<Outline>();
+        Outline dresserOutline = GameObject.FindWithTag("Dresser")?.GetComponent<Outline>();
+
+        if (bedOutline != null) bedOutline.enabled = true;
+        if (dresserOutline != null) dresserOutline.enabled = true;
+    }
+
+    IEnumerator ShowFirstTimeTutorial()
+    {
+        yield return new WaitForSeconds(curtainDrawTime);
+
+        ShowTutorial(0);
+    }
+
+    IEnumerator ShowChoice1PopUp()
+    {
+        tutorialActive = true;
+
+        yield return new WaitForSeconds(curtainDrawTime);
+
+        EnableOutlines();
+        Script1ChoicePopUp.SetActive(true);
+
+        tutorialActive = false;
+
+        tutorialButton.SetActive(true);
     }
 }

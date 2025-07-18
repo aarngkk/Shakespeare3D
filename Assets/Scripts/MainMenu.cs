@@ -15,6 +15,8 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject quizUnlockText;
     [SerializeField] private float quizUnlockTextDuration;
 
+    private Coroutine quizUnlockCoroutine;
+
     private void Start()
     {
         Button button = quizButton.GetComponent<Button>();
@@ -78,7 +80,13 @@ public class MainMenu : MonoBehaviour
 
     public void ShowQuizUnlockText()
     {
-        StartCoroutine(WaitForQuizUnlockText());
+        // Stop any running coroutine before starting a new one
+        if (quizUnlockCoroutine != null)
+        {
+            StopCoroutine(quizUnlockCoroutine);
+        }
+
+        quizUnlockCoroutine = StartCoroutine(WaitForQuizUnlockText());
     }
 
     IEnumerator WaitForQuizUnlockText()
@@ -88,5 +96,6 @@ public class MainMenu : MonoBehaviour
         yield return new WaitForSeconds(quizUnlockTextDuration);
 
         quizUnlockText.SetActive(false);
+        quizUnlockCoroutine = null;
     }
 }

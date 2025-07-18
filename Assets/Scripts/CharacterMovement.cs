@@ -185,7 +185,7 @@ public class DragCharacter : MonoBehaviour
         }
 
         // Skip outline updates if we shouldn't be showing them
-        if (cutsceneManager == null ||
+        if (TutorialManager.tutorialActive || cutsceneManager == null ||
             cutsceneManager.IsCutscene7Started() ||
             (cutsceneManager.IsCutscene1Started() && !cutsceneManager.IsCutscene6Finished()))
         {
@@ -312,11 +312,14 @@ public class DragCharacter : MonoBehaviour
             selectedCharacter.DeselectCharacter();
         }
 
-        selectedCharacter = this;
-
-        if (outline != null)
+        if (!TutorialManager.tutorialActive)
         {
-            outline.enabled = true;
+            selectedCharacter = this;
+
+            if (outline != null)
+            {
+                outline.enabled = true;
+            }
         }
     }
 
@@ -374,7 +377,7 @@ public class DragCharacter : MonoBehaviour
         if (cutsceneManager == null)
             cutsceneManager = FindObjectOfType<CutsceneManager>();
 
-        bool allowDragging = (!cutsceneManager.IsCutscene1Started() ||
+        bool allowDragging = (!TutorialManager.tutorialActive && !cutsceneManager.IsCutscene1Started() ||
                             (cutsceneManager.IsCutscene6Finished() && !cutsceneManager.IsCutscene7Started()));
 
         Debug.Log($"Dragging allowed: {allowDragging}");
