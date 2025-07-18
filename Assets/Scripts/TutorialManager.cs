@@ -25,9 +25,14 @@ public class TutorialManager : MonoBehaviour
     // Time it takes curtains to draw
     [SerializeField] private float curtainDrawTime;
     [SerializeField] private GameObject tutorialButton;
+    [SerializeField] private GameObject leftCurtains;
+    [SerializeField] private GameObject rightCurtains;
 
     void Start()
     {
+        leftCurtains.SetActive(true);
+        rightCurtains.SetActive(true);
+
         if (PlayerPrefs.GetInt("TutorialCompleted") != 1)
         {
             tutorialActive = true;
