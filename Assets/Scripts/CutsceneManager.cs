@@ -141,13 +141,16 @@ public class CutsceneManager : MonoBehaviour
 
     void Start()
     {
-        // Set initial button visibility
-        playButton.gameObject.SetActive(false);
-        pauseButton.gameObject.SetActive(true);
+        if (playButton != null && pauseButton != null)
+        {
+            // Set initial button visibility
+            playButton.gameObject.SetActive(false);
+            pauseButton.gameObject.SetActive(true);
 
-        // Attach play/pause events
-        playButton.onClick.AddListener(PlayCutscene);
-        pauseButton.onClick.AddListener(PauseCutscene);
+            // Attach play/pause events
+            playButton.onClick.AddListener(PlayCutscene);
+            pauseButton.onClick.AddListener(PauseCutscene);
+        }
     }
 
     public void PlayCutscene(string cutsceneType, System.Action onCutsceneEnd = null)
