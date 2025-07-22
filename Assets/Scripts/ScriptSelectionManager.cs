@@ -17,6 +17,7 @@ public class ScriptSelectionManager : MonoBehaviour
     public Button undoButton;
     public Button redoButton;
     public Button scriptButton;
+    public GameObject scriptChoicePopUp;
 
     public TMP_Text buttonText;
     public TMP_Text titleText;
@@ -25,6 +26,7 @@ public class ScriptSelectionManager : MonoBehaviour
     private List<string> scripts = new List<string>();
     private int currentIndex = 0;
     private float scrollSens = 3f;
+    private bool scriptPopUpReopen = false;
     public string SelectedScript { get; private set; }
     public static bool IsPanelOpen { get; private set; }
 
@@ -187,6 +189,8 @@ public class ScriptSelectionManager : MonoBehaviour
     // Opens the pop-up panel and disables all other buttons
     public void OpenScriptSelection()
     {
+        if (scriptChoicePopUp.activeSelf) scriptPopUpReopen = true;
+        scriptChoicePopUp.SetActive(false);
         UpdateScriptDetail();
         scriptPanel.SetActive(true);
         IsPanelOpen = true;
@@ -198,6 +202,12 @@ public class ScriptSelectionManager : MonoBehaviour
     {
         scriptPanel.SetActive(false);
         IsPanelOpen = false; // Mark the panel as closed
+
+        if (scriptPopUpReopen)
+        {
+            scriptChoicePopUp.SetActive(true);
+            scriptPopUpReopen = false;
+        }
 
         foreach (Button btn in otherButtons) btn.interactable = true;
         if (saveButton != null) saveButton.interactable = false;
