@@ -30,8 +30,11 @@ public class TutorialManager : MonoBehaviour
 
     void Start()
     {
-        leftCurtains.SetActive(true);
-        rightCurtains.SetActive(true);
+        if (leftCurtains != null && rightCurtains != null)
+        {
+            leftCurtains.SetActive(true);
+            rightCurtains.SetActive(true);
+        }
 
         if (PlayerPrefs.GetInt("TutorialCompleted") != 1)
         {

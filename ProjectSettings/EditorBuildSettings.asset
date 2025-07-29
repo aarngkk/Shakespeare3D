@@ -6,24 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/MainMenu.unity
-    guid: 72f839c7502f68b49826ce007b137b6c
-  - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: e8a45d06f0f589a418961782ac51c179
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Play All Scenes.unity
     guid: 658472fa8dbed5e46a8f345880e76f67
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/New Scene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 0
-    path: Assets/Scenes/Edit Scene.unity
-    guid: c2bf93764d0a19b46a001ff247c7b7da
-  - enabled: 0
-    path: Assets/Scenes/Play Scene.unity
-    guid: 6ebc1ec5d16a4ec418c8b5eca2905401
-  - enabled: 1
     path: Assets/Scenes/Quiz Scene.unity
     guid: 5ecdb53c6d556d7438a3507bf484a984
+  - enabled: 1
+    path: Assets/Sun_Temple/Scenes/DemoScene.unity
+    guid: d8f213b28287d8b4dab42cf4a34f94e5
   m_configObjects: {}

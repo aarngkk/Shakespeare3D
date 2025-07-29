@@ -2,6 +2,11 @@ using UnityEngine;
 
 public class DragCharacter : MonoBehaviour
 {
+    private Vector3 charStartingPosition;
+    private Vector3 bedSnapOffset = new Vector3(4.389999986f, 0.047966f, 0.80559955f);
+    private Vector3 dresserSnapOffset = new Vector3(-4.31000001f, 0.047966f, 0.55559955f);
+    private Vector3 carpetSnapOffset = new Vector3(-0.710000014f, 0.047966f, -0.79440045f);
+
     // Dragging state and references
     private Vector3 startPosition;
     private Quaternion startRotation;
@@ -17,16 +22,19 @@ public class DragCharacter : MonoBehaviour
     private Vector3 originalPosition;
     private Bounds stageBounds;
 
-    private Transform parentObject; // New: Reference to parent group
+    private Transform parentObject; 
+
     private CutsceneManager cutsceneManager;
 
     void Start()
     {
+        charStartingPosition = transform.position;
+
         // Initialize references and setup
         cutsceneManager = FindObjectOfType<CutsceneManager>();
         cam = Camera.main;
         rb = GetComponent<Rigidbody>();
-        groundPlane = new Plane(Vector3.up, Vector3.zero);
+        groundPlane = new Plane(Vector3.up, transform.position);
         originalPosition = transform.position;
 
         // Setup outline effect
@@ -142,7 +150,7 @@ public class DragCharacter : MonoBehaviour
             if (col.CompareTag("BedZone"))
             {
                 Debug.Log("Snapped to Bed");
-                parentObject.position = new Vector3(-4.0f, -1.5f, -4.1f);
+                parentObject.position = charStartingPosition - bedSnapOffset;
                 parentObject.rotation = Quaternion.Euler(0, 0, 0);
                 FindObjectOfType<PlaySceneButton>().SetCurrentSnapPoint("Bed");
                 snappedToBed = true;
@@ -155,7 +163,7 @@ public class DragCharacter : MonoBehaviour
             else if (col.CompareTag("DresserZone"))
             {
                 Debug.Log("Snapped to Dresser");
-                parentObject.position = new Vector3(4.7f, -1.5f, -3.85f);
+                parentObject.position = charStartingPosition - dresserSnapOffset;
                 parentObject.rotation = Quaternion.Euler(0, 0, 0);
                 FindObjectOfType<PlaySceneButton>().SetCurrentSnapPoint("Dresser");
                 snappedToDresser = true;
@@ -163,7 +171,7 @@ public class DragCharacter : MonoBehaviour
             else if (col.CompareTag("CarpetZone"))
             {
                 Debug.Log("Snapped to Carpet");
-                parentObject.position = new Vector3(1.1f, -1.5f, -2.5f);
+                parentObject.position = charStartingPosition - carpetSnapOffset;
                 parentObject.rotation = Quaternion.Euler(0, 0, 0);
                 FindObjectOfType<PlaySceneButton>().SetCurrentSnapPoint("Carpet");
                 snappedToCarpet = true;
@@ -281,7 +289,7 @@ public class DragCharacter : MonoBehaviour
                     dresserOutline.enabled = true;
                     dresserOutline.OutlineColor = Color.white;
                 }
-                if (carpetOutline != null)
+                if (carpetOutline != null && cutsceneManager.IsCutscene6Finished())
                 {
                     carpetOutline.enabled = true;
                     carpetOutline.OutlineColor = Color.white;

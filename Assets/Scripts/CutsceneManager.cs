@@ -43,6 +43,8 @@ public class CutsceneManager : MonoBehaviour
     public GameObject bedZone;
     public GameObject dresserZone;
     public GameObject carpetObject;
+    private BoxCollider carpetCollider;
+    private Outline carpetOutline;
 
     // Cameras used for scene transitions
     [Header("Cameras")]
@@ -141,6 +143,9 @@ public class CutsceneManager : MonoBehaviour
 
     void Start()
     {
+        carpetCollider = carpetObject.GetComponent<BoxCollider>();
+        carpetOutline = carpetObject.GetComponent<Outline>();
+
         if (playButton != null && pauseButton != null)
         {
             // Set initial button visibility
@@ -202,9 +207,10 @@ public class CutsceneManager : MonoBehaviour
                 bedZone.SetActive(false);
                 Debug.Log("BedZone GameObject disabled.");
             }
-            if (carpetObject != null)
+            if (carpetCollider != null && carpetOutline != null)
             {
-                carpetObject.SetActive(false);
+                carpetCollider.enabled = false;
+                carpetOutline.enabled = false;
                 Debug.Log("CarpetZone GameObject disabled.");
             }
         }
@@ -365,9 +371,11 @@ public class CutsceneManager : MonoBehaviour
 
             if (script7PositionPanel != null) script7PositionPanel.SetActive(true);
 
-            if (carpetObject != null)
+            if (carpetCollider != null && carpetOutline != null)
             {
-                carpetObject.SetActive(true);
+                carpetCollider.enabled = true;  
+                carpetOutline.enabled = true;
+                carpetOutline.OutlineColor = Color.white;
                 Debug.Log("Carpet GameObject enabled.");
             }
 
@@ -640,9 +648,11 @@ public class CutsceneManager : MonoBehaviour
         Debug.Log("Cutscene7 state reset. Bed outline and snap points re-enabled.");
 
         // Re-enable the Carpet GameObject
-        if (carpetObject != null)
+        if (carpetCollider != null && carpetOutline != null)
         {
-            carpetObject.SetActive(true);
+            carpetCollider.enabled = true;
+            carpetOutline.OutlineColor = Color.white;
+            carpetOutline.enabled = true;
             Debug.Log("Carpet GameObject re-enabled.");
         }
 
@@ -655,7 +665,6 @@ public class CutsceneManager : MonoBehaviour
 
         // Get outline references
         Outline bedOutline = GameObject.FindWithTag("Bed")?.GetComponent<Outline>();
-        Outline carpetOutline = GameObject.FindWithTag("CarpetZone")?.GetComponent<Outline>();
         Outline dresserOutline = GameObject.FindWithTag("Dresser")?.GetComponent<Outline>();
 
         // Only enable outlines if we're returning to a state where they should be visible
@@ -727,9 +736,10 @@ public class CutsceneManager : MonoBehaviour
         script7ChoicePopupPanel.SetActive(false);
 
         // Disable the carpet GameObject
-        if (carpetObject != null)
+        if (carpetCollider != null && carpetOutline != null)
         {
-            carpetObject.SetActive(false);
+            carpetCollider.enabled = false;
+            carpetOutline.enabled = false;
             Debug.Log("Carpet GameObject disabled.");
         }
 

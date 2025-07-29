@@ -11,6 +11,9 @@ public class CameraController : MonoBehaviour
 
     private Vector3 lastMousePosition; // Stores the last mouse position for calculating movement
 
+    [SerializeField] private Transform cameraTargetTransform;
+    private Vector3 cameraTarget => cameraTargetTransform.position;
+
     void Update()
     {
         HandleDragging();    // Handles camera dragging (moving horizontally/vertically)
@@ -67,9 +70,9 @@ public class CameraController : MonoBehaviour
         Vector3 newPosition = transform.position + direction;
 
        // Check if new position is within zoom limits
-        float distance = Vector3.Distance(newPosition, Vector3.zero);
+        float distance = Vector3.Distance(newPosition, cameraTarget);
 
-        // Clamp zooming so it doesn�t go too far or too close
+        // Clamp zooming so it doesn't go too far or too close
         if (distance >= minZoomDistance && distance <= maxZoomDistance)
         {
             transform.position = newPosition;
