@@ -56,7 +56,7 @@ public class MainMenu : MonoBehaviour
     // Loads the "New Scene" menu
     public void CreateNewScene()
     {
-        SceneManager.LoadScene("New Scene");
+        SceneManager.LoadScene("DemoScene");
     }
 
     // Loads the "Quiz Scene" menu

@@ -78,6 +78,8 @@ public class SceneSaverUI : MonoBehaviour
         {
             cutsceneManager.currentCutscene.Resume();
             Debug.Log("Cutscene resumed after closing save panel.");
+
+            cutsceneManager.RefreshPausePlayButtons();
         }
         
         // Re-enable all main screen buttons
@@ -241,6 +243,8 @@ public class SceneSaverUI : MonoBehaviour
         {
             cutsceneManager.currentCutscene.Resume();
             Debug.Log("Cutscene resumed after closing save panel.");
+
+            cutsceneManager.RefreshPausePlayButtons();
         }
         
         // Re-enable all main screen buttons

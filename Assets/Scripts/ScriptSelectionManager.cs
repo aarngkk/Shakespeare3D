@@ -190,7 +190,7 @@ public class ScriptSelectionManager : MonoBehaviour
     public void OpenScriptSelection()
     {
         if (scriptChoicePopUp.activeSelf) scriptPopUpReopen = true;
-        scriptChoicePopUp.SetActive(false);
+        if (scriptChoicePopUp) scriptChoicePopUp.SetActive(false);
         UpdateScriptDetail();
         scriptPanel.SetActive(true);
         IsPanelOpen = true;

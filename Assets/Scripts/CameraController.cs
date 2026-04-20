@@ -13,6 +13,14 @@ public class CameraController : MonoBehaviour
 
     [SerializeField] private Transform cameraTargetTransform;
     private Vector3 cameraTarget => cameraTargetTransform.position;
+    private Vector3 cameraOriginalPos;
+    private Quaternion cameraOriginalRotation;
+
+    private void Start()
+    {
+        cameraOriginalPos = transform.position;
+        cameraOriginalRotation = transform.rotation;
+    }
 
     void Update()
     {
@@ -77,5 +85,13 @@ public class CameraController : MonoBehaviour
         {
             transform.position = newPosition;
         }
+    }
+
+    public void ResetCamera()
+    {
+        if (!this.gameObject.activeSelf) return;
+
+        transform.position = cameraOriginalPos;
+        transform.rotation = cameraOriginalRotation;
     }
 }

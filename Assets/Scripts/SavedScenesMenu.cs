@@ -109,7 +109,7 @@ public class SavedScenesMenu : MonoBehaviour
         SceneDataTransfer.Instance.SetLogFile(sceneName);
 
          // Load the main replay scene
-        SceneManager.LoadScene("Play All Scenes"); 
+        SceneManager.LoadScene("Play All Scenes (test)"); 
     }
 
     // Displays confirmation to delete save file

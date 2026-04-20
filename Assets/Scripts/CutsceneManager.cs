@@ -38,7 +38,12 @@ public class CutsceneManager : MonoBehaviour
 
     public GameObject Script1ChoicePopUp; // UI popup shown after script 1
 
-    // Game objects used for player interaction zones
+    // Game objects that need to be enabled
+    [Header("Objects to Enable")]
+    [SerializeField] private GameObject capulet;
+    [SerializeField] private GameObject nurse;
+
+    // Game objects that need to be disabled
     [Header("Objects to Disable")]
     public GameObject bedZone;
     public GameObject dresserZone;
@@ -170,6 +175,8 @@ public class CutsceneManager : MonoBehaviour
         if (cutsceneType == "Bed" || cutsceneType == "Dresser")
         {
             isCutscene1Started = true;
+            //capulet.SetActive(true);
+            //nurse.SetActive(true);
 
             // Clear snap points and reset character positions
             DragCharacter[] dragCharacters = FindObjectsOfType<DragCharacter>();
@@ -630,6 +637,13 @@ public class CutsceneManager : MonoBehaviour
             return;
         }
 
+        if (currentCutscene != null && currentCutscene.state == PlayState.Paused)
+        {
+            currentCutscene.Play();
+            isPaused = false;
+            UpdateButtonVisibility();
+        }
+
         if (currentCutscene != null && currentCutscene.state == PlayState.Playing)
         {
             currentCutscene.stopped -= OnCutsceneFinished; // Removes the listener
@@ -864,5 +878,14 @@ public class CutsceneManager : MonoBehaviour
         {
             Debug.LogError($"Failed to write autosave file: {e.Message}");
         }
+    }
+
+    public void RefreshPausePlayButtons()
+    {
+        if (currentCutscene == null)
+            return;
+
+        isPaused = currentCutscene.state == PlayState.Paused;
+        UpdateButtonVisibility();     
     }
 }
