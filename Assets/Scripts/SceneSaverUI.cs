@@ -278,6 +278,6 @@ public class SceneSaverUI : MonoBehaviour
      // Discard current changes and start a new scene
     public void OnDiscardAllButtonClicked()
     {
-        SceneManager.LoadScene("New Scene");
+        SceneManager.LoadScene("DemoScene");
     }
 }
