@@ -1,4 +1,4 @@
-<img width="342" height="192" alt="Shakespeare3D Game" src="https://github.com/user-attachments/assets/4c64f0be-ec26-4e0a-9847-ba8e85adb268" />
+<img width="684" height="384" alt="Shakespeare3D Game" src="https://github.com/user-attachments/assets/2dde6323-dcd8-4617-b3e0-b53df8d84d76" />
 
 ## Shakespeare3D
 
